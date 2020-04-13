@@ -131,4 +131,6 @@ spec:
                   fieldPath: metadata.name
             - name: OPERATOR_NAME
               value: "redis-enterprise-operator"
+            - name: DATABASE_CONTROLLER_ENABLED
+              value: "yes"
 ---
