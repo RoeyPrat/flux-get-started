@@ -2,7 +2,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: redis-webcli-automation
+  name: redis-webcli
 spec:
   replicas: 1
   selector:
