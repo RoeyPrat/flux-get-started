@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: redis-webcli-automation
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-webcli
+      name: redis-webcli
+  template:
+    metadata:
+        app: redis-webcli
+        name: redis-webcli
+    spec:
+      containers:
+      - env:
+        - name: REDIS_SENTINEL_HOST
+          value: redis-enterprise
+        - name: REDIS_SENTINEL_PORT
+          value: "8001"
+        - name: REDIS_PASSWORD
+          value: automation
+        - name: REDIS_DBNAME
+          value: bdb-test
+        image: redislabs/redis-webcli:latest
+        imagePullPolicy: Always
+        name: redis-webcli
+        securityContext:
+          runAsNonRoot: true
+          runAsUser: 2000
