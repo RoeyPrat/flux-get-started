@@ -11,6 +11,7 @@ spec:
       name: redis-webcli
   template:
     metadata:
+      labels:
         app: redis-webcli
         name: redis-webcli
     spec:
