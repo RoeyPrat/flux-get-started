@@ -15,10 +15,8 @@ spec:
     spec:
       containers:
       - env:
-        - name: REDIS_SENTINEL_HOST
+        - name: REDIS_URL
           value: redis-enterprise
-        - name: REDIS_SENTINEL_PORT
-          value: "8001"
         - name: REDIS_PASSWORD
           value: automation
         - name: REDIS_DBNAME
