@@ -16,11 +16,14 @@ spec:
       containers:
       - env:
         - name: REDIS_URL
-          value: redis-enterprise
+          value: redis-enterprise-database:15731
         - name: REDIS_PASSWORD
-          value: automation
+          valueFrom:
+            secretKeyRef:
+              name: redb-redis-enterprise-database
+              key: password
         - name: REDIS_DBNAME
-          value: bdb-test
+          value: redis-enterprise-database
         image: redislabs/redis-webcli:latest
         imagePullPolicy: Always
         name: redis-webcli
