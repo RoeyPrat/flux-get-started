@@ -21,7 +21,7 @@ spec:
         env:
         - name: REDIS_HOSTS
           value: redis-enterprise-database
-        - name REDIS_PORT
+        - name: REDIS_PORT
           value: 15731
         - name: REDIS_PASSWORD
           valueFrom:
