@@ -2,7 +2,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: redis-commander
+  name: redis-commander2
 spec:
   replicas: 1
   selector:
