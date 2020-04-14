@@ -22,7 +22,7 @@ spec:
         - name: REDIS_HOSTS
           value: redis-enterprise-database
         - name: REDIS_PORT
-          value: 15731
+          value: "15731"
         - name: REDIS_PASSWORD
           valueFrom:
             secretKeyRef:
@@ -38,7 +38,7 @@ metadata:
   name: redis-commander
 spec:
   ports:
-  - port: 443
+  - port: 8081
     protocol: TCP
     targetPort: 8081
   selector:
