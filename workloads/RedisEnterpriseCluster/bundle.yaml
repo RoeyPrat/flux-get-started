@@ -133,4 +133,6 @@ spec:
               value: "redis-enterprise-operator"
             - name: DATABASE_CONTROLLER_ENABLED
               value: "yes"
+            - name: USE_INTERNAL_REPO
+              value: "yes"
 ---
