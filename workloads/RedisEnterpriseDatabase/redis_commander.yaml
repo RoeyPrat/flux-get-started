@@ -20,9 +20,15 @@ spec:
         image: rediscommander/redis-commander
         env:
         - name: REDIS_HOST
-          value: redis-enterprise-database
+          valueFrom:
+            secretKeyRef:
+              name: redb-redis-enterprise-database
+              key: service_name
         - name: REDIS_PORT
-          value: "15731"
+          valueFrom:
+            secretKeyRef:
+              name: redb-redis-enterprise-database
+              key: port
         - name: REDIS_PASSWORD
           valueFrom:
             secretKeyRef:
