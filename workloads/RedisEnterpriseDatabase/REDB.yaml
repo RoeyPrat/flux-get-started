@@ -1,9 +1,9 @@
   
-apiVersion: app.redislabs.com/v1alpha1
-kind: RedisEnterpriseDatabase
-metadata:
-  name: "redis-enterprise-database"
-spec:
-  redisEnterpriseCluster:
-    name: "redis-enterprise"
-  persistence: aofAlways
+# apiVersion: app.redislabs.com/v1alpha1
+# kind: RedisEnterpriseDatabase
+# metadata:
+#   name: "redis-enterprise-database"
+# spec:
+#   redisEnterpriseCluster:
+#     name: "redis-enterprise"
+#   persistence: aofAlways
